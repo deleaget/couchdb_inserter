@@ -1,7 +1,7 @@
 defmodule CouchdbInserter.Documents do
   require Logger
 
-  @chunk_size 2
+  @chunk_size 100
 
   def insert_new_docs(payload_request) do
     [server: server, username: username, password: password, port: port, db_name: db_name] = Application.get_env(:couchdb_inserter, :database)
