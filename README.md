@@ -1,21 +1,32 @@
 # CouchdbInserter
 
-**TODO: Add description**
+**Simple project to insert some docs in CouchDB.**
+
+## Versions
+
+erlang 23.1
+elixir 1.11.1-otp-23
+nodejs 15.1.0
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `couchdb_inserter` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:couchdb_inserter, "~> 0.1.0"}
-  ]
-end
+```zsh
+foo@bar:~$ mix deps.get && mix deps.compile
+foo@bar:~$ iex -S mix
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/couchdb_inserter](https://hexdocs.pm/couchdb_inserter).
+## Screenshots
+
+<kbd>![Lunch App](img-readme/lunch_app.gif)</kbd>
+
+<kbd>![Get home /](img-readme/get_home.gif)</kbd>
+
+<kbd>![Post simple doc](img-readme/insert_simple.gif)</kbd>
+
+(Chunk are set to 2)
+<kbd>![Post multiple docs](img-readme/insert_multiple.gif)</kbd>
+
+<kbd>![Post bad request](img-readme/insert_400.gif)</kbd>
+
+<kbd>![Post with an error](img-readme/insert_error.gif)</kbd>
 
