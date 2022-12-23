@@ -13,7 +13,10 @@ defmodule CouchdbInserter.Http.Wrapper do
 end
 
 defmodule CouchdbInserter.Http.Client do
-  def post(url, body, type \\ 'application/json', opts \\ [recv_timeout: 5_000, timeout: 10_000]) do
+  require Logger
+
+  def post(url, body, type \\ 'application/json', opts \\ [timeout: 10_000]) do
+    Logger.debug("[#{__MODULE__}] POST at #{url}")
     :httpc.request(:post, {url, [], type, body}, opts, [])
   end
 end
