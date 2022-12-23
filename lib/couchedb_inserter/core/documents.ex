@@ -15,7 +15,7 @@ defmodule CouchdbInserter.Documents do
         status_code =
           cond do
             Enum.count(error_responses) == 0 ->
-              200
+              201
 
             Enum.count(valid_responses) == 0 ->
               error_responses
